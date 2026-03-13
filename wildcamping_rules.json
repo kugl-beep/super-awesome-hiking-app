@@ -1,0 +1,695 @@
+[
+  {
+    "country": "Albanien",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": null,
+    "source": "https://albania.al/activity/adventure/camping-astrotourism/"
+  },
+  {
+    "country": "Andorra",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": "https://www.ordinoarcalis.com/en/blog/campings-andorra",
+    "source": "https://www.ordinoarcalis.com/en/blog/campings-andorra"
+  },
+  {
+    "country": "Belarus",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": null,
+    "source": "https://www.caravanya.com/de/wildcampen-in-europa/frei-stehen-in-weissrussland/"
+  },
+  {
+    "country": "Belgien",
+    "wildcamping_status": "IN MARKIERTEN GEBIETEN",
+    "wildcamping_category": "restricted",
+    "helper_source": "https://www.bivakzone.be/",
+    "source": "https://trekkingtrails.de/jedermannsrecht/"
+  },
+  {
+    "country": "Bosnien und Herzegowina",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": "https://bosnien-und-herzegowina-reisefuehrer.de/wildcampen-in-bosnien-und-herzegowina/",
+    "source": "https://bosnien-und-herzegowina-reisefuehrer.de/wildcampen-in-bosnien-und-herzegowina/"
+  },
+  {
+    "country": "Bulgarien",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.backpackertrail.de/wildcampen-bulgarien/"
+  },
+  {
+    "country": "Dänemark",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "https://naturstyrelsen.dk/aktiviteter-i-naturen/overnat-og-spis-i-naturen",
+    "source": "https://trekkingtrails.de/jedermannsrecht/"
+  },
+  {
+    "country": "Deutschland",
+    "wildcamping_status": "REGIONAL ABHÄNGIG, jedoch Zelten im Wald überall verboten",
+    "wildcamping_category": "unknown",
+    "helper_source": "https://trekkingtrails.de/trekkingplaetze/",
+    "source": "https://trekkingtrails.de/jedermannsrecht/"
+  },
+  {
+    "country": "Brandenburg",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Zelten für eine Nacht unter freiem Himmel möglich, jedoch nicht im Wald",
+    "source": "https://www.zasada.cc/wildcampen-info"
+  },
+  {
+    "country": "Mecklenburg-Vorpommern",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Zelten für eine Nacht unter freiem Himmel möglich, jedoch nicht im Wald",
+    "source": "https://www.zasada.cc/wildcampen-info"
+  },
+  {
+    "country": "SCHLESWIGHOLSTEIN",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Zelten für eine Nacht unter freiem Himmel möglich, jedoch nicht im Wald",
+    "source": "https://www.zasada.cc/wildcampen-info"
+  },
+  {
+    "country": "Baden-Würtemberg",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.zasada.cc/wildcampen-info"
+  },
+  {
+    "country": "Saarland",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.zasada.cc/wildcampen-info"
+  },
+  {
+    "country": "Niedersachsen",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.zasada.cc/wildcampen-info"
+  },
+  {
+    "country": "Sachsen",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.zasada.cc/wildcampen-info"
+  },
+  {
+    "country": "Sachsen-Anhalt",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.zasada.cc/wildcampen-info"
+  },
+  {
+    "country": "Hessen",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.zasada.cc/wildcampen-info"
+  },
+  {
+    "country": "Bayern",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.zasada.cc/wildcampen-info"
+  },
+  {
+    "country": "Berlin",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.zasada.cc/wildcampen-info"
+  },
+  {
+    "country": "Rheinland-Pfalz",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.zasada.cc/wildcampen-info"
+  },
+  {
+    "country": "Nordrheinwestpfahlen",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.zasada.cc/wildcampen-info"
+  },
+  {
+    "country": "Thüringen",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.zasada.cc/wildcampen-info"
+  },
+  {
+    "country": "Bremen",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.zasada.cc/wildcampen-info"
+  },
+  {
+    "country": "Hamburg",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.zasada.cc/wildcampen-info"
+  },
+  {
+    "country": "Estland",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": null,
+    "source": "https://www.backpackertrail.de/wildcampen-estland/"
+  },
+  {
+    "country": "Finnland",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": null,
+    "source": "https://www.visitfinland.com/de/artikel/finnische-jedermannsrechte/"
+  },
+  {
+    "country": "Frankreich",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.alpacacamping.de/content/wildcampen-frankreich/"
+  },
+  {
+    "country": "Griechenland",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://vanever.com/de/blog/wildcampen-griechenland"
+  },
+  {
+    "country": "Irland",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": "https://www.campingireland.ie",
+    "source": "https://trekkingtrails.de/jedermannsrecht/"
+  },
+  {
+    "country": "Island",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://trekkingtrails.de/jedermannsrecht/"
+  },
+  {
+    "country": "Italien",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": "Nur mit Campinggenehmigung möglich",
+    "source": "https://stories.hanwag.com/de/jedermannsrecht-wildcampen-europa/"
+  },
+  {
+    "country": "Kroatien",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://roadsurfer.com/de/blog/wildcampen/kroatien/"
+  },
+  {
+    "country": "Lettland",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": null,
+    "source": "https://www.lvm.lv/sabiedribai/dodies-meza/labas-uzvedibas-noteikumi"
+  },
+  {
+    "country": "Liechtenstein",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.backpackertrail.de/liechtenstein-wildcampen/"
+  },
+  {
+    "country": "Litauen",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "https://vmu.lt/en/forestry/recreation-map/",
+    "source": "https://vmu.lt/en/"
+  },
+  {
+    "country": "Luxemburg",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.bergfreunde.de/blog/wohnmobil-camper-wildcampen/#h-niederlande-luxemburg"
+  },
+  {
+    "country": "Malta",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": "https://malta.reise/a-z/camping/",
+    "source": "https://malta.reise/a-z/camping/"
+  },
+  {
+    "country": "Moldau",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": null,
+    "source": "https://www.vintrica.com/de/blog/aktivurlaub-moldau/?srsltid=AfmBOooi8LhjXCOcKYbbkBi9C-80w96v9ugY-MN8FfEyQSg5NGSxb19N"
+  },
+  {
+    "country": "Monaco",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.seemonaco.com/camping/guide"
+  },
+  {
+    "country": "Montenegro",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://abenteuerglobus.com/tipps-montenegro-freistehen-wildcamping/"
+  },
+  {
+    "country": "Niederlande",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.bergfreunde.de/blog/wohnmobil-camper-wildcampen/#h-niederlande-luxemburg"
+  },
+  {
+    "country": "Nordmazedonien",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.caravanya.com/de/wildcampen-in-europa/frei-stehen-in-nordmazedonien/"
+  },
+  {
+    "country": "Norwegen",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": null,
+    "source": "https://trekkingtrails.de/jedermannsrecht/"
+  },
+  {
+    "country": "Österreich",
+    "wildcamping_status": "REGIONAL ABHÄNGIG",
+    "wildcamping_category": "unknown",
+    "helper_source": null,
+    "source": "https://www.alpenverein.at/portal/natur-umwelt/respektamberg/zelten-biwakieren.php"
+  },
+  {
+    "country": "Oberösterreich",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.alpenverein.at/portal/natur-umwelt/respektamberg/zelten-biwakieren.php"
+  },
+  {
+    "country": "Salzburg",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Oberhalb der Waldgrenze alleine und in kleinen Gruppen",
+    "source": "https://www.alpenverein.at/portal/natur-umwelt/respektamberg/zelten-biwakieren.php"
+  },
+  {
+    "country": "Steiermark",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Oberhalb der Waldgrenze alleine und in kleinen Gruppen",
+    "source": "https://www.alpenverein.at/portal/natur-umwelt/respektamberg/zelten-biwakieren.php"
+  },
+  {
+    "country": "Vorarlberg",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Oberhalb der Waldgrenze alleine und in kleinen Gruppen",
+    "source": "https://www.alpenverein.at/portal/natur-umwelt/respektamberg/zelten-biwakieren.php"
+  },
+  {
+    "country": "Burgenland",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.alpenverein.at/portal/natur-umwelt/respektamberg/zelten-biwakieren.php"
+  },
+  {
+    "country": "Kärnten",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.alpenverein.at/portal/natur-umwelt/respektamberg/zelten-biwakieren.php"
+  },
+  {
+    "country": "Niederösterreich",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.alpenverein.at/portal/natur-umwelt/respektamberg/zelten-biwakieren.php"
+  },
+  {
+    "country": "Tirol",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.alpenverein.at/portal/natur-umwelt/respektamberg/zelten-biwakieren.php"
+  },
+  {
+    "country": "Wien",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.alpenverein.at/portal/natur-umwelt/respektamberg/zelten-biwakieren.php"
+  },
+  {
+    "country": "Polen",
+    "wildcamping_status": "IN MARKIERTEN GEBIETEN",
+    "wildcamping_category": "restricted",
+    "helper_source": "https://www.bdl.lasy.gov.pl/portal/mapy-en?t=0&ll=19.412949%2C52.001221&scale=4622324&map=8%2C0.7&layers=76%2C77&basemap=2&extwms=&hist=",
+    "source": "https://www.bdl.lasy.gov.pl/portal/mapy-en?t=0&ll=19.412949%2C52.001221&scale=4622324&map=8%2C0.7&layers=76%2C77&basemap=2&extwms=&hist="
+  },
+  {
+    "country": "Portugal",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": "https://www.camping.info/de/land/portugal?awc=44063_1772710794_999583d8a52afd8cdbd0f7482c07c7cf&source=aw&sv1=affiliate&sv_campaign_id=398423&utm_source=aw",
+    "source": "https://www.portugal360.de/urlaub-reisen/reiseinformationen/wildcampen"
+  },
+  {
+    "country": "Rumänien",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": null,
+    "source": "https://www.outdoornet.de/wildcampen/rumaenien/"
+  },
+  {
+    "country": "Russland",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": null,
+    "source": "https://bikepacking-adventures.com/wildcampen-europa/#Wildes_Zelten_in_Russland"
+  },
+  {
+    "country": "San Marino",
+    "wildcamping_status": "/",
+    "wildcamping_category": "unknown",
+    "helper_source": null,
+    "source": null
+  },
+  {
+    "country": "Schweden",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": null,
+    "source": "https://trekkingtrails.de/jedermannsrecht/"
+  },
+  {
+    "country": "Schweiz",
+    "wildcamping_status": "REGIONAL ABHÄNGIG",
+    "wildcamping_category": "unknown",
+    "helper_source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_regelung",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php"
+  },
+  {
+    "country": "Aargau",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen)",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Appenzell Ausserrhoden",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen)",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Appenzell Innerrhoden",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Basel-Landschaft",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze  (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen)",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Basel-Stadt",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Bern",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": "Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen)",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Freiburg",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Genf",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": "Zelten im Wald ist ausdrücklich verboten, ausser auf ausgewiesenen Campingplätzen und mit Genehmigung des Kantonales Amtes für Landwirtschaft und Natur",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Glarus",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen)",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Graubünden",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen) https://www.graubuenden.ch/de/buchen/unterkuenfte/camping/wild-campen",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Jura",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": "Nur mit Campinggenehmigung möglich",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Luzern",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Neuenburg",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen)",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Nidwalden",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen)",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Obwalden",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "1\" Zum einmaligen Übernachten darf ein Zelt, ein Wohnwagen oder ein Wohnmobil ohne Bewilligung ausserhalb bewilligter Campingplätze aufgestellt werden, wenn keine öffentlichen oder privaten Interessen beeinträchtigt werden. \n2\" Das einmalige Übernachten erfolgt auf eigenes Risiko. Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen)",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Schaffhausen",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen)",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Schwyz",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen)",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Solothurn",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen)",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "St. Gallen",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen)",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Tessin",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Thurgau",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Uri",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen)",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Waadt",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen)",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Wallis",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen)",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Zug",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Zelten nicht meldepflichtig außerhalb empfindlicher Gebieten (https://www.tcs.ch/assets/docs/tcs-camping-insider/stoerungsempfindlichkeit_wald_kanton_zug.pdf)Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen)",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Zürich",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": "Einzelne Übernachtungen (nicht in Gruppen) im Gebirge, oberhalb der Waldgrenze (bei mehreren Übernachtungen tagsüber das Zelt wieder abbauen)",
+    "source": "https://www.tcs.ch/de/camping-reisen/camping-insider/ratgeber/reisevorbereitung/wild-campen-in-der-schweiz.php#anchor_10a3edb9_Accordion-Wild-campen-im-Kanton-Zug"
+  },
+  {
+    "country": "Serbien",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.caravanya.com/de/wildcampen-in-europa/frei-stehen-in-serbien/"
+  },
+  {
+    "country": "Slowakei",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.outdoornet.de/wildcampen/slowakei/"
+  },
+  {
+    "country": "Slowenien",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.backpackertrail.de/slowenien-wildcampen/"
+  },
+  {
+    "country": "Spanien",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.backpackertrail.de/wildcampen-spanien/"
+  },
+  {
+    "country": "Tschechien",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.outdoornet.de/wildcampen/tschechien/"
+  },
+  {
+    "country": "Türkei",
+    "wildcamping_status": "/",
+    "wildcamping_category": "unknown",
+    "helper_source": "https://the-scenic-route.de/wildcampen-frei-stehen/tuerkei/",
+    "source": null
+  },
+  {
+    "country": "Ukraine",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": null,
+    "source": "https://www.caravanya.com/de/wildcampen-in-europa/frei-stehen-in-der-ukraine/"
+  },
+  {
+    "country": "Ungarn",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://www.outdoornet.de/wildcampen/ungarn/"
+  },
+  {
+    "country": "Vatikanstadt",
+    "wildcamping_status": "/",
+    "wildcamping_category": "unknown",
+    "helper_source": null,
+    "source": null
+  },
+  {
+    "country": "Schottland",
+    "wildcamping_status": "JA",
+    "wildcamping_category": "allowed",
+    "helper_source": null,
+    "source": "https://trekkingtrails.de/jedermannsrecht/"
+  },
+  {
+    "country": "Nordirland",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": null,
+    "source": "https://irelandwide.com/wild-camping-in-ireland/"
+  },
+  {
+    "country": "Wales",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": "https://www.caravanya.com/de/wildcampen-in-europa/frei-stehen-in-wales/",
+    "source": "https://uk.jackery.com/blogs/lifestyle/can-you-wild-camp-in-wales"
+  },
+  {
+    "country": "England",
+    "wildcamping_status": "NEIN",
+    "wildcamping_category": "forbidden",
+    "helper_source": "https://www.dartmoor.gov.uk/about-us/about-us-maps/camping-map",
+    "source": "https://theloadedbackpack.com/hiking-skills-tips/wild-camping-uk/wild-camping-legality-uk/"
+  }
+]

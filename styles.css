@@ -1,0 +1,129 @@
+
+:root{
+  --bg:#0f172a;
+  --panel:#111827;
+  --panel-2:#1f2937;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --accent:#22c55e;
+  --line:#60a5fa;
+  --border:#334155;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text)}
+body{display:grid;grid-template-columns:360px 1fr}
+.sidebar{height:100vh;overflow:auto;border-right:1px solid var(--border);background:var(--panel)}
+.panel{padding:16px;border-bottom:1px solid var(--border)}
+h1,h2{margin:0 0 10px 0}
+h1{font-size:1.35rem}
+h2{font-size:1rem}
+.subtle,.meta{color:var(--muted);font-size:.92rem;line-height:1.4}
+.controls{display:grid;gap:12px;margin-top:14px}
+.control span{display:block;font-size:.9rem;margin-bottom:6px;color:var(--muted)}
+input[type=text]{
+  width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--border);
+  background:var(--panel-2);color:var(--text)
+}
+.toggles{display:grid;gap:8px;font-size:.95rem}
+.legend{margin-top:14px}
+.legend-row{display:flex;align-items:center;gap:8px;margin:6px 0;color:#d1d5db;font-size:.92rem}
+.swatch{width:16px;height:16px;border-radius:4px;display:inline-block;border:1px solid rgba(255,255,255,.15)}
+.swatch.route{
+  width:24px;
+  height:0;
+  border:none;
+  border-top:4px solid #60a5fa;
+  border-radius:0;
+  background:transparent;
+}
+.swatch.shelter{
+  width:14px;
+  height:14px;
+  border-radius:999px;
+  background:#22c55e;
+  border:1px solid rgba(255,255,255,.85);
+}
+.swatch.allowed{background:rgba(34,197,94,.7)}
+.swatch.restricted{background:rgba(245,158,11,.8)}
+.swatch.forbidden{background:rgba(239,68,68,.8)}
+.list-panel{padding-top:12px}
+.list-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.route-list{display:grid;gap:8px;max-height:calc(100vh - 360px);overflow:auto}
+.route-item{
+  border:1px solid var(--border);background:var(--panel-2);padding:10px 12px;border-radius:12px;cursor:pointer;
+}
+.route-item:hover,.route-item.active{border-color:#60a5fa;outline:1px solid rgba(96,165,250,.35)}
+.route-item .name{font-weight:600;margin-bottom:4px}
+.route-item .meta{font-size:.8rem;color:var(--muted)}
+.map-wrap{position:relative;height:100vh}
+#map{position:absolute;inset:0}
+.status-banner{
+  position:absolute;right:16px;top:16px;z-index:5;background:rgba(17,24,39,.9);color:#e5e7eb;
+  border:1px solid var(--border);border-radius:999px;padding:10px 14px;font-size:.9rem;backdrop-filter: blur(6px);
+}
+.maplibregl-popup-content{max-width:320px;padding:12px 14px;border-radius:12px}
+.popup-title{font-weight:700;margin-bottom:8px}
+.popup-meta{font-size:.88rem;color:#374151;line-height:1.45}
+.sources-link{
+  color:#93c5fd;
+  text-decoration:none;
+  font-weight:600;
+}
+.sources-link:hover{text-decoration:underline}
+.sources-page{
+  max-width:980px;
+  margin:0 auto;
+  padding:32px 20px 56px;
+  line-height:1.55;
+}
+.sources-page h1{margin-bottom:8px}
+.sources-page h2{margin-top:28px;margin-bottom:10px}
+.sources-page p,.sources-page li{color:#d1d5db}
+.sources-page a{color:#93c5fd}
+.sources-page .back-link{
+  display:inline-block;
+  margin-bottom:18px;
+  color:#93c5fd;
+  text-decoration:none;
+  font-weight:600;
+}
+.sources-page .back-link:hover{text-decoration:underline}
+.sources-page .card{
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:18px 20px;
+  margin-top:14px;
+}
+.sources-page ul{margin-top:8px}
+.sources-page code{
+  background:var(--panel-2);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:2px 6px;
+}
+@media (max-width: 960px){
+  body{grid-template-columns:1fr}
+  .sidebar{position:absolute;left:0;top:0;bottom:0;z-index:10;width:min(360px,90vw);transform:translateX(-100%);display:none}
+}
+
+
+.sources-page table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:10px;
+}
+.sources-page th,
+.sources-page td{
+  text-align:left;
+  vertical-align:top;
+  padding:10px 12px;
+  border:1px solid var(--border);
+}
+.sources-page th{
+  background:var(--panel-2);
+  color:#e5e7eb;
+}
+.sources-page ol{
+  margin-top:8px;
+}

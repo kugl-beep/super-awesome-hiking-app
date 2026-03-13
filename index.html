@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Europa Wanderkarte – Prototyp</title>
+  <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="panel">
+      <h1>Europa Wanderkarte</h1>
+      <p class="subtle">Interaktive Übersichtskarte für Wanderrouten, Schutzhütten und Wildcamping-Regeln in Europa.</p>
+      <p class="subtle"><a class="sources-link" href="./quellen.html">Datenquellen</a> · <a class="sources-link" href="./workflow.html">Workflow</a></p>
+
+      <div class="controls">
+        <label class="control">
+          <span>Route suchen</span>
+          <input id="routeSearch" type="text" placeholder="z. B. Kungsleden" />
+        </label>
+
+        <div class="toggles">
+          <label><input id="toggleRoutes" type="checkbox" checked /> Routen</label>
+          <label><input id="toggleShelters" type="checkbox" checked /> Schutzhütten</label>
+          <label><input id="toggleWildcamping" type="checkbox" checked /> Wildcamping</label>
+        </div>
+      </div>
+
+      <div class="legend">
+        <h2>Legende</h2>
+        <div class="legend-row"><span class="swatch route"></span> Wanderroute</div>
+        <div class="legend-row"><span class="swatch shelter"></span> Schutzhütte</div>
+        <div class="legend-row"><span class="swatch allowed"></span> Wildcamping erlaubt</div>
+        <div class="legend-row"><span class="swatch restricted"></span> Nur eingeschränkt / markierte Gebiete</div>
+        <div class="legend-row"><span class="swatch forbidden"></span> Wildcamping verboten</div>
+      </div>
+    </div>
+
+    <div class="panel list-panel">
+      <div class="list-header">
+        <h2>Routen</h2>
+        <span id="routeCount">0</span>
+      </div>
+      <div id="routeList" class="route-list"></div>
+    </div>
+  </aside>
+
+  <main class="map-wrap">
+    <div id="map"></div>
+    <div id="statusBanner" class="status-banner">Lade Daten…</div>
+  </main>
+
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

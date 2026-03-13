@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Datenquellen – Europa Wanderkarte</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="sources-page">
+    <a class="back-link" href="./index.html">← Zurück zur Karte</a>
+
+    <h1>Datenquellen</h1>
+    <p>Diese Seite dokumentiert die im Webmap-Prototyp verwendeten Ausgangsdaten, die daraus erzeugten Arbeitsdateien sowie die für die rechtliche Einordnung verwendeten Referenzen. Die Formulierungen sind auf eine Nutzung durch Dritte ausgerichtet.</p>
+
+    <div class="card">
+      <h2>Primäre Ausgangsdaten</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Thema</th>
+            <th>Ausgangsquelle</th>
+            <th>Verwendung im Projekt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nationalstaaten Europa</td>
+            <td><a href="https://hub.arcgis.com/datasets/esri::world-countries-generalized/explore?location=-0.000264%2C0.000000%2C1.00" target="_blank" rel="noopener">Esri Hub – World Countries (Generalized)</a></td>
+            <td>Ausgangsbasis für die europaweiten Staatenpolygone; daraus wurde der Länderlayer zur Darstellung der Wildcamping-Regeln abgeleitet.</td>
+          </tr>
+          <tr>
+            <td>Schutzhütten</td>
+            <td><a href="https://campwild.org/#home" target="_blank" rel="noopener">campwild.org</a></td>
+            <td>Ausgangsbasis für den Schutzhütten-Datensatz; die Daten wurden übernommen, bereinigt und als GeoJSON für die Webmap aufbereitet.</td>
+          </tr>
+          <tr>
+            <td>Wanderrouten</td>
+            <td><a href="https://hiking.waymarkedtrails.org/#?map=10.0/50.7364/7.3312" target="_blank" rel="noopener">Waymarked Trails – Hiking</a></td>
+            <td>Ausgangsbasis für die Wanderrouten; aus den exportierten Einzelrouten wurde ein gemeinsamer bereinigter Routenlayer erstellt.</td>
+          </tr>
+          <tr>
+            <td>Rechtliche Grundtabelle</td>
+            <td>Projektinterne Tabelle <code>Legalität.xlsx</code></td>
+            <td>Grundlage für die Zuordnung der Wildcamping-Regeln, insbesondere für Deutschland und Österreich.</td>
+          </tr>
+          <tr>
+            <td>Europaweiter Rechtslayer</td>
+            <td>Projektinterne Datei <code>Legalitaet.geojson</code></td>
+            <td>Bereits gejointes Polygon-Dataset; daraus wurde die bereinigte Datei <code>countries_wildcamp.geojson</code> erzeugt.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Zusätzliche Verwaltungsgrenzen für Admin-1-Ebene</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Raumbezug</th>
+            <th>Quelle</th>
+            <th>Verwendung im Projekt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Deutschland – Bundesländer</td>
+            <td><a href="https://github.com/isellsoap/deutschlandGeoJSON/blob/main/2_bundeslaender/4_niedrig.geo.json" target="_blank" rel="noopener">deutschlandGeoJSON – Bundesländer</a></td>
+            <td>Geometrische Grundlage für den Admin-1-Wildcamping-Layer Deutschlands.</td>
+          </tr>
+          <tr>
+            <td>Österreich – Bundesländer</td>
+            <td><a href="https://github.com/ginseng666/GeoJSON-TopoJSON-Austria" target="_blank" rel="noopener">GeoJSON-TopoJSON-Austria</a></td>
+            <td>Geometrische Grundlage für den Admin-1-Wildcamping-Layer Österreichs.</td>
+          </tr>
+          <tr>
+            <td>Belgien, Polen, Türkei</td>
+            <td>Projektinterne Dateien <code>BEL_admin1.geojson</code>, <code>POL_admin1.geojson</code>, <code>TUR_admin1.json</code></td>
+            <td>Geometrische Grundlage für die Admin-1-Layer dieser Staaten.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Rechtliche Referenzen zur Wildcamping-Einordnung</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Raumbezug</th>
+            <th>Referenz</th>
+            <th>Funktion im Projekt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Deutschland / Österreich</td>
+            <td><a href="https://trekkingtrails.de/jedermannsrecht/" target="_blank" rel="noopener">trekkingtrails.de – Jedermannsrecht</a><br><a href="https://www.zasada.cc/wildcampen-info" target="_blank" rel="noopener">zasada.cc – Wildcampen in Europa</a></td>
+            <td>Ergänzende Referenzen zur allgemeinen Einordnung; primäre Zuordnung erfolgte über die projektinterne Tabelle <code>Legalität.xlsx</code>.</td>
+          </tr>
+          <tr>
+            <td>Belgien</td>
+            <td><a href="https://www.bivakzone.be/" target="_blank" rel="noopener">bivakzone.be</a><br><a href="https://natuurenbos.be/activiteiten/bivakzone" target="_blank" rel="noopener">Natuur en Bos – Bivakzone</a></td>
+            <td>Referenz für die konservative Einordnung „nur in ausgewiesenen bzw. anerkannten Bivakzonen“.</td>
+          </tr>
+          <tr>
+            <td>Polen</td>
+            <td><a href="https://zanocujwlesie.lasy.gov.pl/" target="_blank" rel="noopener">Zanocuj w lesie</a><br><a href="https://www.lasy.gov.pl/pl/turystyka/program-zanocuj-w-lesie" target="_blank" rel="noopener">Lasy Państwowe – Programm „Zanocuj w lesie“</a></td>
+            <td>Referenz für die Einordnung „nur in ausgewiesenen Gebieten“.</td>
+          </tr>
+          <tr>
+            <td>Türkei</td>
+            <td><a href="https://www.tarimorman.gov.tr/DKMP/Belgeler/KORUNAN%20ALANLAR%20%C3%9CCRET%20TAR%C4%B0FES%C4%B0/2026/Ek-21%20Korunan%20Alanlar%20Ucret%20Tarifesi%20Uygulama%20Usul%20ve%20Esaslari-2026.pdf" target="_blank" rel="noopener">Türkische Schutzgebietsregeln 2026 (PDF)</a></td>
+            <td>Referenz für die vorsichtige Modellierung „regional abhängig / lokal prüfen“ sowie für Schutzgebietsauflagen.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Im Projekt erzeugte Arbeitsdateien</h2>
+      <ul>
+        <li><code>routes_top50_clean.geojson</code> – bereinigter gemeinsamer Routenlayer</li>
+        <li><code>shelters.geojson</code> – bereinigter Schutzhüttenlayer</li>
+        <li><code>countries_wildcamp.geojson</code> – bereinigter europaweiter Wildcamping-Länderlayer</li>
+        <li><code>wildcamping_admin1_de_be_pl_tr_at.geojson</code> – Admin-1-Wildcamping-Layer für Deutschland, Belgien, Polen, Türkei und Österreich</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Methodischer Hinweis</h2>
+      <p>Die Webmap ist als planungsorientierte Übersicht konzipiert. Die rechtlichen Einordnungen stellen keine rechtsverbindliche Auskunft dar. Regionale Ausnahmen, Schutzgebietsregelungen und kurzfristige Änderungen sind möglich und sollten vor einer konkreten Nutzung gesondert geprüft werden.</p>
+    </div>
+  </main>
+</body>
+</html>

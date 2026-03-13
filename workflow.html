@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Workflow – Europa Wanderkarte</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="sources-page">
+    <a class="back-link" href="./index.html">← Zurück zur Karte</a>
+
+    <h1>Workflow</h1>
+    <p>Diese Seite beschreibt den Arbeitsablauf zur Erstellung der Webmap in sachlicher, dokumentationsorientierter Form.</p>
+
+    <div class="card">
+      <h2>1. Datenerfassung</h2>
+      <ol>
+        <li>Erfassung bzw. Übernahme der Wanderrouten aus Waymarked Trails als Einzeldateien.</li>
+        <li>Übernahme der Schutzhütten-Daten aus campwild.org und Export in ein GeoJSON-basiertes Arbeitsformat.</li>
+        <li>Bereitstellung der Staatenpolygone Europas auf Basis des Datensatzes „World Countries (Generalized)“.</li>
+        <li>Bereitstellung der projektinternen Tabelle <code>Legalität.xlsx</code> sowie des vorbereiteten Rechtslayers <code>Legalitaet.geojson</code>.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>2. Datenaufbereitung</h2>
+      <ol>
+        <li>Zusammenführung der einzelnen Routen zu einem gemeinsamen Datensatz.</li>
+        <li>Bereinigung und Vereinheitlichung der Routennamen, Routentypen und Netzwerkangaben.</li>
+        <li>Prüfung auf Dubletten und Entfernung fehlerhafter oder redundanter Einträge.</li>
+        <li>Bereinigung der Schutzhütten-Daten und Aufbereitung für die Webdarstellung.</li>
+        <li>Reduktion und Umbenennung langer Attributfelder im Rechtslayer zur besseren Verwendbarkeit im Frontend.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>3. Ableitung der Wildcamping-Layer</h2>
+      <ol>
+        <li>Erzeugung eines europaweiten Länderlayers <code>countries_wildcamp.geojson</code> aus dem vorbereiteten Polygon-Datensatz.</li>
+        <li>Zuordnung von Statusklassen wie <code>allowed</code>, <code>restricted</code>, <code>forbidden</code> und <code>unknown</code>.</li>
+        <li>Erstellung eines zusätzlichen Admin-1-Layers für Deutschland, Belgien, Polen, Türkei und Österreich.</li>
+        <li>Für Deutschland und Österreich erfolgte die Zuordnung auf Basis der projektinternen Tabelle <code>Legalität.xlsx</code>.</li>
+        <li>Für Belgien, Polen und die Türkei erfolgte eine konservative Übertragung landesweiter Regeln auf die jeweilige Admin-1-Ebene.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>4. Frontend-Implementierung</h2>
+      <ol>
+        <li>Erstellung einer Webmap auf Basis von MapLibre GL JS.</li>
+        <li>Einbindung der Layer für Wanderrouten, Schutzhütten, Länder-Wildcamping und Admin-1-Wildcamping.</li>
+        <li>Konfiguration von Popups, Layer-Schaltern, Routensuche und Sidebar-Navigation.</li>
+        <li>Ergänzung einer Quellen-Seite und einer Workflow-Seite als eigenständige HTML-Dokumente.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>5. Qualitätssicherung</h2>
+      <ol>
+        <li>Prüfung der Routendatensätze auf Konsistenz, insbesondere hinsichtlich Benennung und Dubletten.</li>
+        <li>Prüfung der Popup-Links auf gültige HTTP/HTTPS-Adressen.</li>
+        <li>Kontrolle der Wildcamping-Kategorien und Sichtprüfung der Polygondarstellung in der Webmap.</li>
+        <li>Dokumentation der verwendeten Quellen und der erzeugten Arbeitsdateien.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>6. Ergebnis</h2>
+      <p>Das Ergebnis ist ein lokaler Webmap-Prototyp mit einer interaktiven Darstellung von Wanderrouten, Schutzhütten und Wildcamping-Regeln sowie ergänzenden Dokumentationsseiten zu Quellen und Workflow.</p>
+    </div>
+  </main>
+</body>
+</html>
