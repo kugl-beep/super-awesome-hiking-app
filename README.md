@@ -1,6 +1,7 @@
 # Europa Wanderkarte – Abschlussprojekt Geoinformatik
 
-##https://kugl-beep.github.io/super-awesome-hiking-app/index.html
+Direkter Link zur Wanderkarte :
+https://kugl-beep.github.io/super-awesome-hiking-app/index.html
 
 ## Ziel
 
