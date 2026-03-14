@@ -12,7 +12,6 @@
     <div class="panel">
       <h1>Europa Wanderkarte</h1>
       <p class="subtle">Interaktive Übersichtskarte für Wanderrouten, Schutzhütten und Wildcamping-Regeln in Europa.</p>
-      <p class="subtle"><a class="sources-link" href="./quellen.html">Datenquellen</a> · <a class="sources-link" href="./workflow.html">Workflow</a></p>
 
       <div class="controls">
         <label class="control">
@@ -47,8 +46,24 @@
   </aside>
 
   <main class="map-wrap">
+    <div class="overlay-doc-buttons">
+      <button id="openSources" class="doc-btn" type="button">Datenquellen</button>
+      <button id="openWorkflow" class="doc-btn" type="button">Workflow</button>
+    </div>
+
     <div id="map"></div>
     <div id="statusBanner" class="status-banner">Lade Daten…</div>
+
+    <div id="docOverlay" class="doc-overlay hidden" aria-hidden="true">
+      <div id="closeDocOverlay" class="doc-overlay-backdrop"></div>
+      <div class="doc-overlay-panel">
+        <div class="doc-overlay-header">
+          <h2 id="docOverlayTitle">Dokumentation</h2>
+          <button id="docOverlayCloseBtn" class="doc-close-btn" type="button">×</button>
+        </div>
+        <div id="docOverlayContent" class="doc-overlay-content"></div>
+      </div>
+    </div>
   </main>
 
   <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>

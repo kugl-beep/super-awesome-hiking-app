@@ -50,14 +50,48 @@ const routeListEl = document.getElementById('routeList');
 const routeCountEl = document.getElementById('routeCount');
 const routeSearchEl = document.getElementById('routeSearch');
 
+const docOverlay = document.getElementById('docOverlay');
+const docOverlayTitle = document.getElementById('docOverlayTitle');
+const docOverlayContent = document.getElementById('docOverlayContent');
+const openSourcesBtn = document.getElementById('openSources');
+const openWorkflowBtn = document.getElementById('openWorkflow');
+const closeDocOverlay = document.getElementById('closeDocOverlay');
+const closeDocOverlayBtn = document.getElementById('docOverlayCloseBtn');
+
 let routesGeojson = null;
 let sheltersGeojson = null;
 let selectedRouteSlug = null;
 let wildcampingAvailable = false;
 let wildcampingAdmin1Available = false;
+let activePopup = null;
+let statusTimer = null;
 
 function setStatus(text){
   statusBanner.textContent = text;
+  statusBanner.style.opacity = '1';
+  statusBanner.style.pointerEvents = 'auto';
+  if (statusTimer) clearTimeout(statusTimer);
+  statusTimer = setTimeout(() => {
+    statusBanner.style.opacity = '0';
+    statusBanner.style.pointerEvents = 'none';
+  }, 3500);
+}
+
+function ensureSinglePopup(popup){
+  if (activePopup) activePopup.remove();
+  activePopup = popup;
+  popup.on('close', () => {
+    if (activePopup === popup) activePopup = null;
+  });
+  return popup;
+}
+
+function showPopup(lngLat, html){
+  const popup = new maplibregl.Popup({ closeOnClick: true, maxWidth: '320px' })
+    .setLngLat(lngLat)
+    .setHTML(html)
+    .addTo(map);
+  ensureSinglePopup(popup);
 }
 
 function escapeHtml(value=''){
@@ -130,6 +164,28 @@ async function loadJson(path){
   return res.json();
 }
 
+async function loadHtmlBody(path){
+  const res = await fetch(path);
+  if(!res.ok) throw new Error(`Konnte ${path} nicht laden`);
+  const text = await res.text();
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(text, 'text/html');
+  const main = doc.querySelector('main');
+  return main ? main.innerHTML : text;
+}
+
+function openDocOverlay(title, innerHtml){
+  docOverlayTitle.textContent = title;
+  docOverlayContent.innerHTML = innerHtml;
+  docOverlay.classList.remove('hidden');
+  docOverlay.setAttribute('aria-hidden', 'false');
+}
+
+function closeOverlay(){
+  docOverlay.classList.add('hidden');
+  docOverlay.setAttribute('aria-hidden', 'true');
+}
+
 function buildRouteList(features){
   routeListEl.innerHTML = '';
   routeCountEl.textContent = features.length;
@@ -194,6 +250,18 @@ function applySearchFilter(){
   routeCountEl.textContent = visible;
 }
 
+function sanitizeShelterDesc(raw){
+  if(!raw) return 'Keine Beschreibung verfügbar';
+  let s = String(raw).trim();
+  s = s.replace(/<p>\s*<strong>.*?<\/p>/gi, ' ');
+  s = s.replace(/<\/?p>/gi, ' ');
+  s = s.replace(/<\/?strong>/gi, ' ');
+  s = s.replace(/<br\s*\/?>/gi, ' ');
+  s = s.replace(/<[^>]+>/g, ' ');
+  s = s.replace(/\s+/g, ' ').trim();
+  return s || 'Keine Beschreibung verfügbar';
+}
+
 function popupForRoute(feature){
   const p = feature.properties || {};
   return `
@@ -209,11 +277,12 @@ function popupForRoute(feature){
 
 function popupForShelter(feature){
   const p = feature.properties || {};
+  const desc = sanitizeShelterDesc(p.desc);
   const link = isValidWebUrl(p.link1_href) ? `<br><a href="${escapeHtml(p.link1_href)}" target="_blank" rel="noopener">${escapeHtml(p.link1_text || linkLabel(p.link1_href))}</a>` : '';
   return `
     <div class="popup-title">${escapeHtml(p.name || 'Schutzhütte')}</div>
     <div class="popup-meta">
-      ${escapeHtml(p.desc || 'Keine Beschreibung verfügbar')}
+      ${escapeHtml(desc)}
       ${link}
     </div>
   `;
@@ -255,28 +324,99 @@ async function init(){
     routesGeojson = routes;
     sheltersGeojson = shelters;
 
+    openSourcesBtn.addEventListener('click', async () => {
+      const html = await loadHtmlBody('./quellen.html');
+      openDocOverlay('Datenquellen', html);
+    });
+    openWorkflowBtn.addEventListener('click', async () => {
+      const html = await loadHtmlBody('./workflow.html');
+      openDocOverlay('Workflow', html);
+    });
+    closeDocOverlay.addEventListener('click', closeOverlay);
+    closeDocOverlayBtn.addEventListener('click', closeOverlay);
+
     map.on('load', async () => {
-      map.addSource('routes', { type: 'geojson', data: routesGeojson });
-      map.addLayer({
-        id: 'routes-line',
-        type: 'line',
-        source: 'routes',
-        paint: {
-          'line-color': '#60a5fa',
-          'line-width': ['interpolate', ['linear'], ['zoom'], 4, 1.8, 7, 3.2, 10, 5],
-          'line-opacity': 0.9
-        }
-      });
-      map.addLayer({
-        id: 'routes-hit',
-        type: 'line',
-        source: 'routes',
-        paint: {
-          'line-color': '#ffffff',
-          'line-width': ['interpolate', ['linear'], ['zoom'], 4, 10, 10, 18],
-          'line-opacity': 0
-        }
-      });
+      try{
+        const countries = await loadJson('./countries_wildcamp.geojson');
+        wildcampingAvailable = true;
+        map.addSource('wildcamping', { type: 'geojson', data: countries });
+        map.addLayer({
+          id: 'wildcamping-fill',
+          type: 'fill',
+          source: 'wildcamping',
+          filter: ['!', ['in', ['get', 'iso_a2'], ['literal', ['DE','PL','BE','AT']]]],
+          paint: {
+            'fill-color': [
+              'match',
+              ['get', 'wildcamping_category'],
+              'allowed', '#22c55e',
+              'restricted', '#f59e0b',
+              'forbidden', '#ef4444',
+              '#9ca3af'
+            ],
+            'fill-opacity': 0.18
+          }
+        });
+        map.addLayer({
+          id: 'wildcamping-outline',
+          type: 'line',
+          source: 'wildcamping',
+          filter: ['!', ['in', ['get', 'iso_a2'], ['literal', ['DE','PL','BE','AT']]]],
+          paint: {
+            'line-color': '#cbd5e1',
+            'line-width': 0.8,
+            'line-opacity': 0.35
+          }
+        });
+
+        map.on('click', 'wildcamping-fill', (e) => {
+          const feature = e.features?.[0];
+          if(!feature) return;
+          showPopup(e.lngLat, popupForCountry(feature));
+        });
+      } catch(err){
+        console.warn('Wildcamping-Länderdatei fehlt noch:', err.message);
+      }
+
+      try{
+        const admin1 = await loadJson('./wildcamping_admin1_de_be_pl_tr_at.geojson');
+        wildcampingAdmin1Available = true;
+        map.addSource('wildcamping-admin1', { type: 'geojson', data: admin1 });
+        map.addLayer({
+          id: 'wildcamping-admin1-fill',
+          type: 'fill',
+          source: 'wildcamping-admin1',
+          paint: {
+            'fill-color': [
+              'match',
+              ['get', 'wildcamping_category'],
+              'allowed', '#22c55e',
+              'restricted', '#f59e0b',
+              'forbidden', '#ef4444',
+              '#9ca3af'
+            ],
+            'fill-opacity': 0.28
+          }
+        });
+        map.addLayer({
+          id: 'wildcamping-admin1-outline',
+          type: 'line',
+          source: 'wildcamping-admin1',
+          paint: {
+            'line-color': '#475569',
+            'line-width': 1.1,
+            'line-opacity': 0.75
+          }
+        });
+
+        map.on('click', 'wildcamping-admin1-fill', (e) => {
+          const feature = e.features?.[0];
+          if(!feature) return;
+          showPopup(e.lngLat, popupForAdmin1(feature));
+        });
+      } catch(err){
+        console.warn('Wildcamping-Admin1-Datei fehlt noch:', err.message);
+      }
 
       map.addSource('shelters', {
         type: 'geojson',
@@ -325,98 +465,40 @@ async function init(){
         }
       });
 
-      try{
-        const countries = await loadJson('./countries_wildcamp.geojson');
-        wildcampingAvailable = true;
-        map.addSource('wildcamping', { type: 'geojson', data: countries });
-        map.addLayer({
-          id: 'wildcamping-fill',
-          type: 'fill',
-          source: 'wildcamping',
-          paint: {
-            'fill-color': [
-              'match',
-              ['get', 'wildcamping_category'],
-              'allowed', '#22c55e',
-              'restricted', '#f59e0b',
-              'forbidden', '#ef4444',
-              '#9ca3af'
-            ],
-            'fill-opacity': 0.18
-          }
-        });
-        map.addLayer({
-          id: 'wildcamping-outline',
-          type: 'line',
-          source: 'wildcamping',
-          paint: {
-            'line-color': '#cbd5e1',
-            'line-width': 0.8,
-            'line-opacity': 0.35
-          }
-        });
-
-        map.on('click', 'wildcamping-fill', (e) => {
-          const feature = e.features?.[0];
-          if(!feature) return;
-          new maplibregl.Popup().setLngLat(e.lngLat).setHTML(popupForCountry(feature)).addTo(map);
-        });
-      } catch(err){
-        console.warn('Wildcamping-Länderdatei fehlt noch:', err.message);
-      }
-
-      try{
-        const admin1 = await loadJson('./wildcamping_admin1_de_be_pl_tr_at.geojson');
-        wildcampingAdmin1Available = true;
-        map.addSource('wildcamping-admin1', { type: 'geojson', data: admin1 });
-        map.addLayer({
-          id: 'wildcamping-admin1-fill',
-          type: 'fill',
-          source: 'wildcamping-admin1',
-          paint: {
-            'fill-color': [
-              'match',
-              ['get', 'wildcamping_category'],
-              'allowed', '#22c55e',
-              'restricted', '#f59e0b',
-              'forbidden', '#ef4444',
-              '#9ca3af'
-            ],
-            'fill-opacity': 0.28
-          }
-        });
-        map.addLayer({
-          id: 'wildcamping-admin1-outline',
-          type: 'line',
-          source: 'wildcamping-admin1',
-          paint: {
-            'line-color': '#475569',
-            'line-width': 1.1,
-            'line-opacity': 0.75
-          }
-        });
-
-        map.on('click', 'wildcamping-admin1-fill', (e) => {
-          const feature = e.features?.[0];
-          if(!feature) return;
-          new maplibregl.Popup().setLngLat(e.lngLat).setHTML(popupForAdmin1(feature)).addTo(map);
-        });
-      } catch(err){
-        console.warn('Wildcamping-Admin1-Datei fehlt noch:', err.message);
-      }
+      map.addSource('routes', { type: 'geojson', data: routesGeojson });
+      map.addLayer({
+        id: 'routes-line',
+        type: 'line',
+        source: 'routes',
+        paint: {
+          'line-color': '#60a5fa',
+          'line-width': ['interpolate', ['linear'], ['zoom'], 4, 1.8, 7, 3.2, 10, 5],
+          'line-opacity': 0.95
+        }
+      });
+      map.addLayer({
+        id: 'routes-hit',
+        type: 'line',
+        source: 'routes',
+        paint: {
+          'line-color': '#ffffff',
+          'line-width': ['interpolate', ['linear'], ['zoom'], 4, 10, 10, 18],
+          'line-opacity': 0
+        }
+      });
 
       map.on('click', 'routes-hit', (e) => {
         const feature = e.features?.[0];
         if(!feature) return;
         const slug = feature.properties?.slug;
         if(slug) selectRoute(slug);
-        new maplibregl.Popup().setLngLat(e.lngLat).setHTML(popupForRoute(feature)).addTo(map);
+        showPopup(e.lngLat, popupForRoute(feature));
       });
 
       map.on('click', 'shelter-points', (e) => {
         const feature = e.features?.[0];
         if(!feature) return;
-        new maplibregl.Popup().setLngLat(e.lngLat).setHTML(popupForShelter(feature)).addTo(map);
+        showPopup(e.lngLat, popupForShelter(feature));
       });
 
       map.on('click', 'shelter-clusters', async (e) => {
@@ -469,7 +551,10 @@ async function init(){
         if (map.getLayer('wildcamping-fill')) layers.push('wildcamping-fill');
         if (map.getLayer('wildcamping-admin1-fill')) layers.push('wildcamping-admin1-fill');
         const features = map.queryRenderedFeatures(e.point, { layers });
-        if(!features.length) resetRouteFilter();
+        if(!features.length){
+          if (activePopup) activePopup.remove();
+          resetRouteFilter();
+        }
       });
     });
   }catch(err){
