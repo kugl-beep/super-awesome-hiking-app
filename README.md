@@ -1,5 +1,5 @@
 # Europa Wanderkarte – Abschlussprojekt Geoinformatik
-
+### [Webmap ansehen](https://kugl-beep.github.io/super-awesome-hiking-app/index.html)
 ## Ziel
 
 Dieses Projekt verfolgt das Ziel, eine interaktive Webmap zur Darstellung europäischer Wanderrouten, Schutzhütten und Wildcamping-Regelungen zu entwickeln. Die Anwendung führt mehrere räumliche Datensätze in einer gemeinsamen webbasierten Umgebung zusammen und macht sie für eine kartenbasierte Exploration nutzbar.
