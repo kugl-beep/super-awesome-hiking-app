@@ -1,5 +1,11 @@
 # Europa Wanderkarte – Abschlussprojekt Geoinformatik
 
+<<<<<<< HEAD
+=======
+Direkter Link zur Wanderkarte :
+https://kugl-beep.github.io/super-awesome-hiking-app/index.html
+
+>>>>>>> 6545895d41ed1fe6a584f442be08eb26dbf0b33f
 ## Ziel
 
 Dieses Projekt verfolgt das Ziel, eine interaktive Webmap zur Darstellung europäischer Wanderrouten, Schutzhütten und Wildcamping-Regelungen zu entwickeln. Die Anwendung führt mehrere räumliche Datensätze in einer gemeinsamen webbasierten Umgebung zusammen und macht sie für eine kartenbasierte Exploration nutzbar.
@@ -104,4 +110,8 @@ Für Deutschland und Österreich wurden Wildcamping-Regelungen auf Admin-1-Ebene
 
 Darüber hinaus können regionale Ausnahmen, Schutzgebietsregelungen, kommunale Bestimmungen und kurzfristige Änderungen auftreten. Vor einer konkreten Nutzung für Tourenplanung oder Übernachtung sollten daher stets aktuelle offizielle Quellen und lokale Regelungen geprüft werden.
 
+<<<<<<< HEAD
 Auch die technische Umsetzung ist als Prototyp ausgelegt. Die Anwendung wurde für die lokale Ausführung über einen kleinen Webserver vorbereitet und ist nicht als produktionsreife Webplattform konzipiert.
+=======
+Auch die technische Umsetzung ist als Prototyp ausgelegt. Die Anwendung wurde für die lokale Ausführung über einen kleinen Webserver vorbereitet und ist nicht als produktionsreife Webplattform konzipiert.
+>>>>>>> 6545895d41ed1fe6a584f442be08eb26dbf0b33f
